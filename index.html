@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FABRICAT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sections/whoami/whoami.css">
+  <link rel="stylesheet" href="sections/freeRide/freeRide.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="lang/lang.css">
+  <!-- Cargar Matter.js -->
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+
+  <link rel='icon' href='./assets/favicon.png' type='image/x-icon'>
+
+  <!-- og imagge -->
+  <meta property="og:title" content="FABRICAT" />
+  <meta property="og:description" content="ALL YOU CAN IMAGINE" />
+  <meta property="og:image" content="./assets/fabricat.jpg" />
+
+</head>
+
+<body>
+
+  <div id="lang-selector">  
+      <button class="lang-option" data-lang-btn="es">
+        <img src="./lang/img/esp.svg" alt="es">
+      </button>
+      <button class="lang-option" data-lang-btn="en">
+        <img src="./lang/img/eng.svg" alt="en">
+      </button>
+      <button class="lang-option active" data-lang-btn="cat">
+        <img src="./lang/img/cat.webp" alt="cat">
+      </button>
+  </div>
+
+
+  <!-- <section class="section-title">
+    <h1>FABRICAT</h1>
+  </section> -->
+
+
+  <section id="introduction">
+
+    <h1 data-type="text" class="physics-text" data-anchor="physics-text">FABRICAT</h1>
+
+    <div data-type="ball" class="physics-ball dragme" style="width:clamp(16px, 20vw, 150px);">
+      <div class="container">
+        👋
+        <span class="float">Drag me</span>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="whoami">
+
+    <div class="title-wrap">
+      <div class="title">
+        <h1 data-lang="cat">SOC L'ELOI</h1>
+        <h1 data-lang="es" hidden>SOY ELOI</h1>
+        <h1 data-lang="en" hidden>I’M ELOI</h1>
+  
+        <h2 data-lang="cat">I SOC MAKER</h2>
+        <h2 data-lang="es" hidden>Y SOY MAKER</h2>
+        <h2 data-lang="en" hidden>AND I’M A MAKER</h2>
+      </div>
+    </div>
+  
+    <p class="description" data-lang="cat">
+      <b>FABRICAT</b> és el nom que poso a totes les meves creacions
+    </p>
+    <p class="description" data-lang="es" hidden>
+      <b>FABRICAT</b> es el nombre que le pongo a todas mis creaciones
+    </p>
+    <p class="description" data-lang="en" hidden>
+      <b>FABRICAT</b> is the name I give to all my creations
+    </p>
+  
+    <img src="./assets/elioTransparent.webp" class="elioImg" alt="">
+  
+    <a target="_blank" href="https://instagram.com/elioputo" class="instagram"
+       spring-data="instagram">@elioputo</a>
+  
+  </section>
+  
+
+
+
+
+
+  <section class="freeRide">
+    <button class="exit">&times;</button>
+    <div class="canvasContainer">
+      <canvas></canvas>
+    </div>
+    <button class="btnStart" id="freeRideStartBtn">START</button>
+  </section>
+
+
+
+
+
+
+
+
+
+  <section id="about">
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">ALL</h1>
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">YOU</h1>
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">CAN</h1>
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">IMAGINE</h1>
+
+    <a target="_blank" href="https://instagram.com/fabricat__" class="float instagram"
+      spring-data="instagram">@fabricat__</a>
+
+
+    <div data-type="ball" class="physics-ball instagram" spring-data="instagram">
+      <div class="container">
+        <img src="./assets/fabricat.jpg" alt="" width="200px" height="200px">
+      </div>
+    </div>
+
+    <img src="./assets/framebag.jpeg" style="width:30vw; max-width:300px;">
+
+  </section>
+
+
+<!-- 
+  <section id="tshirt">
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">STICKERS</h1>
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">!</h1>
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">!</h1>
+    <h1 style="font-size: clamp(16px, 10vw, 80px)">!</h1> -->
+
+
+    <!-- <img src="./assets/framebag.jpeg" style="width:50vw; max-width:300px;"> -->
+
+    <!-- <a class="button" href="https://wa.me/34697387245?text=Hey%2C%20quiero%20comprar%20unos%20stickers%21"
+      target="_blank">BUY</a>
+
+  </section> -->
+
+  <script src="./lang/lang.js"></script>
+  <script type="module" scr="./lib/elioCanvas.js"></script>
+  <script src="./lib/elioDOM.js"></script>
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./sections/freeRide/freeRideAsset.js"></script>
+  <script type="module" src="./sections/freeRide/freeRideWorld.js"></script>
+  <script type="module" src="./sections/freeRide/freeRide.js"></script>
+</body>
+
+</html>

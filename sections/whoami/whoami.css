@@ -1,0 +1,172 @@
+#whoami {
+  height: 60vh;
+  position: relative;
+
+  background-color: var(--obsidian);
+}
+
+
+
+#whoami .elioImg {
+  position: absolute;
+  bottom: clamp(-100px, -5vh, -500px);
+  left: 0;
+  width: min(30vh, 50vw);
+  opacity: 0;
+  /* animation: elioEnter .7s ease-out forwards; */
+  transform: rotate(20deg) translate(-10%, 10%) scale(1);
+  opacity: 1;
+  transition: transform .7s ease;
+}
+
+#whoami .elioImg:hover{
+  transform: rotate(10deg) translate(10%, -10%) scale(1.4);
+}
+
+@keyframes elioEnter {
+  0% {
+    transform: rotate(30deg) translate(-30%, 30%) scale(0.8);
+  }
+
+
+  100% {
+    transform: rotate(20deg) translate(-10%, 10%) scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #whoami .elioImg{
+    transform: translate(-50%, 10%) scale(1.5);
+    left: 50%;
+    bottom: 0;
+  }
+
+
+  #whoami .elioImg:hover{
+    transform: translate(-50%, 10%) scale(1.9) rotate(10deg);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+#whoami .instagram {
+  background-color: white;
+  color: #333;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+  padding: .5rem;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  z-index: 200;
+
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  #whoami .instagram{
+    left: 50px;
+  }
+}
+
+
+
+
+
+
+#whoami .title-wrap{
+  position: absolute;
+  width: 100%;
+}
+#whoami .title{
+  position: relative;
+  transform: rotate(-10deg) translate(-30px,-60px);
+  transition: transform .7s ease;
+  width: 100%;
+}
+
+#whoami h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+  padding: 50px;
+  font-size: clamp(50px, 5vw, 100px);
+}
+
+#whoami h2 {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  transition: transform .7s ease;
+  margin: 0;
+}
+
+@media screen and (max-width: 350px) {
+  #whoami .title h2{
+    top: 170px;
+  }
+}
+
+#whoami .title:hover{
+  transform: rotate(7deg) scale(1.3) translate(80px,-60px);
+}
+#whoami .title:hover h2{
+  transform: rotate(5deg) scale(1.15);
+}
+
+
+#whoami .description {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+
+@media screen and (max-width: 500px) {
+  #whoami .description{
+    font-size: 15px;
+    width: 60%;
+  }
+}
+
+
+
+
+#whoami .whatido{
+  background-color: white;
+  color: black;
+  padding: 20px 30px;
+  font-size: 30px;
+
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  border-radius: 10px;
+}

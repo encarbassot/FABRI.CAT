@@ -1,0 +1,162 @@
+.freeRide{
+  position: relative;
+  background-color: #F792b6;
+
+  /* initial height */
+  height: 400px;
+  overflow: hidden;
+  transition: height 1.3s ease;
+
+}
+
+.freeRide.started{
+  height: 100vh;
+}
+
+.freeRide.inmersive {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* INMERSIVE */
+body:has(.freeRide.inmersive) {
+  overflow: hidden;
+
+  & > *:not(.freeRide) {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CANVAS */
+
+.freeRide .canvasContainer{
+  height: 100dvh;
+  width: 100%;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.freeRide .canvasContainer canvas{
+  height: 100%;
+  width: 100%;
+}
+
+.freeRide.inmersive .canvasContainer{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: none;
+
+}
+
+
+
+
+
+
+
+/* BUTTON START */
+.freeRide button.btnStart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  font-size: 50px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+
+  opacity: 1;
+
+  transition: all 1.3s ease;
+}
+
+.freeRide.started button.btnStart {
+  transform: scale(5) rotate(30deg);
+  opacity: 0;
+}
+
+
+.freeRide.inmersive button.btnStart{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EXIT BTN */
+.freeRide button.exit{
+  position: absolute;
+  top: -100px;
+  left: -100px;
+
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+
+  border: 0;
+  cursor: pointer;
+
+  z-index: 100;
+
+  transition: transform .3s ease ;
+}
+
+.freeRide.inmersive button.exit{
+  top: -10px;
+  left: -10px;
+  transform: rotate(10deg);
+}
+
+
+.freeRide.inmersive button.exit:hover{
+  display: block;
+  top: -10px;
+  left: -10px;
+  transform: rotate(15deg) scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+

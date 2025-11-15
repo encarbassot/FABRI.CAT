@@ -1,0 +1,40 @@
+#lang-selector{
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  transform-origin: top right;
+  transform: rotate(100deg) translate(100%,-5px);
+
+}
+
+#lang-selector .lang-option{
+  background: none;
+  border: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  width: 34px;
+  transition: width 0.2s;
+}
+
+#lang-selector:not(:hover) .lang-option.active{
+  width: 45px;
+}
+
+#lang-selector .lang-option:hover{
+  /* transform: scale(1.8); */
+  width: 55px;
+}
+
+#lang-selector .lang-option img{
+  width: 100%;
+  height: auto;
+}
